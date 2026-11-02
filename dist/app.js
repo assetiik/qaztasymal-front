@@ -70,8 +70,8 @@ function updateApp(app) {
   document.getElementById('dialog-description').textContent = business
     ? (lang === 'kk' ? 'Дүкендер мен мейрамханаларға арналған қосымша. Құрылғыңызға сәйкес дүкенді таңдаңыз.' : 'Приложение для магазинов и ресторанов. Выберите магазин для вашего устройства.')
     : (lang === 'kk' ? 'Қосымшалар дүкенін таңдаңыз немесе телефон камерасын QR-кодқа бағыттаңыз.' : 'Выберите магазин приложений или наведите камеру телефона на QR-код.');
+  dialog.dataset.app = app;
   document.getElementById('dialog-qr').hidden = business;
-  document.getElementById('dialog-contact').hidden = !business;
   document.getElementById('dialog-apple').href = business ? 'https://apps.apple.com/kz/app/qaztasymalpro/id6751494692' : 'https://apps.apple.com/kz/app/qaztasymal-kz/id6473836611';
   document.getElementById('dialog-google').href = business ? 'https://play.google.com/store/apps/details?id=com.thousand.qaztasymalpro' : 'https://play.google.com/store/apps/details?id=com.thousand.qaztasymal';
   document.querySelector('.dialog-icon use').setAttribute('href', business ? '#i-store' : '#i-car');
